@@ -7,6 +7,8 @@ from components.Data_Transformation_6 import classify_features
 from components.Train_test_split_7 import split_data
 from components.Data_Preprocessing_8 import preprocess_data,encode_target
 from components.Model_training_9 import train_model
+from components.Model_Tuning_10 import tuning
+from components.Model_Evaluation_11 import evaluate_model
 
 
 def main():
@@ -22,6 +24,14 @@ def main():
 
     leaderBoard, bestModel, bestModelName =  train_model(X_train_preprocessed, y_train_preprocessed,
                                                          X_test_preprocessed, y_test_preprocessed)
+
+    result = tuning(X_train_preprocessed , y_train_preprocessed)
+
+    model = result['tuned_model']
+    model_name = result['model_name']
+
+    evaluation_results = evaluate_model(model, model_name, X_test_preprocessed, y_test_preprocessed)
+    print(evaluation_results)
 
 
 
