@@ -8,7 +8,7 @@ def feature_selection(df: pd.DataFrame):
 
     print("X-Shape: ", X.shape)
     print("Y-Shape: ", y.shape)
-    print("Feature Selection executed")
+    print("5. Feature Selection executed")
 
     return X, y
 
