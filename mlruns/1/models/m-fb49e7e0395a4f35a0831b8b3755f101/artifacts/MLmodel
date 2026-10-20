@@ -1,0 +1,24 @@
+artifact_path: file:///E:/DataScience_Project/Talent Gaurd AI/mlruns/1/models/m-fb49e7e0395a4f35a0831b8b3755f101/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+mlflow_version: 3.17.1
+model_id: m-fb49e7e0395a4f35a0831b8b3755f101
+model_size_bytes: 4997014
+model_uuid: m-fb49e7e0395a4f35a0831b8b3755f101
+prompts: null
+run_id: c9e93d07cbeb4e10817972849e0ddb16
+utc_time_created: '2026-10-20 04:21:22.532962'

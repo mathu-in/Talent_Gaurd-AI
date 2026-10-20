@@ -9,6 +9,7 @@ from components.Data_Preprocessing_8 import preprocess_data,encode_target
 from components.Model_training_9 import train_model
 from components.Model_Tuning_10 import tuning
 from components.Model_Evaluation_11 import evaluate_model
+from components.Experiment_training_12 import log_exp
 
 
 def main():
@@ -32,6 +33,9 @@ def main():
 
     evaluation_results = evaluate_model(model, model_name, X_test_preprocessed, y_test_preprocessed)
     print(evaluation_results)
+
+    log_exp(model, model_name, evaluation_results)
+
 
 
 
