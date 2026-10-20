@@ -56,4 +56,6 @@ def evaluate_model(model, model_name, X_test, y_test):
     display_confusion_matrix(y_test, y_pred)
     display_roc_curve(y_test, probability, auc_score=metrics['ROC AUC'])
 
+    print("11. Model Evaluation is completed")
+
     return metrics
