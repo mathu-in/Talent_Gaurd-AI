@@ -66,3 +66,5 @@ def model_training_pipeline(X_train, y_train, X_test, y_test):
     print("*"*100)
     save_best_model(bestModel, bestModelName)
     print("model saved")
+
+    return leaderBoard, bestModel, bestModelName

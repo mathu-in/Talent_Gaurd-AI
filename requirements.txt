@@ -5,3 +5,5 @@ scikit-learn
 mlflow
 imbalanced-learn
 streamlit
+fastapi
+uvicorn

@@ -6,11 +6,12 @@ from components.Feature_Selection_5 import feature_selection
 from components.Data_Transformation_6 import classify_features
 from components.Train_test_split_7 import split_data
 from components.Data_Preprocessing_8 import preprocess_data,encode_target
-from components.Model_training_9 import train_model
+from components.Model_training_9 import model_training_pipeline
 from components.Model_Tuning_10 import tuning
 from components.Model_Evaluation_11 import evaluate_model
 from components.Experiment_training_12 import log_exp
 from components.SMOTE_13 import apply_smote
+from components.Prediction_pipeline_14 import pred_pipe
 
 
 def main():
@@ -21,12 +22,13 @@ def main():
     X, y = feature_selection(df)
     n, c, t = classify_features(df)
     X_train, X_test, y_train, y_test = split_data(X, y)
+
     X_train_preprocessed, X_test_preprocessed, pre_process_nc_data = preprocess_data(X_train, X_test, n, c)
     y_train_preprocessed, y_test_preprocessed = encode_target(y_train, y_test)
 
     X_train_balanced, y_train_balanced = apply_smote(X_train_preprocessed, y_train_preprocessed)
 
-    leaderBoard, bestModel, bestModelName =  train_model(X_train_balanced, y_train_balanced,
+    leaderBoard, bestModel, bestModelName =  model_training_pipeline(X_train_balanced, y_train_balanced,
                                                          X_test_preprocessed, y_test_preprocessed)
 
     result = tuning(X_train_balanced , y_train_balanced)
@@ -38,6 +40,9 @@ def main():
     print(evaluation_results)
 
     # log_exp(model, model_name, evaluation_results)
+
+
+    # pred_pipe()
 
 
 

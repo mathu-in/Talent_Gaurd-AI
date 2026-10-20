@@ -27,6 +27,7 @@ def log_exp(model, model_name, metrics):
         )
         print(model_name)
         print(Experiment_name)
+        print("12. Experiment tracking is completed --- ML Flow")
 
 
 def main():

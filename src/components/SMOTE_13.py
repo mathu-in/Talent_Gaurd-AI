@@ -10,5 +10,6 @@ def apply_smote(X_train_processed, y_train_processed):
     print(Counter(y_train_balanced))
 
     print("------Smote applied------")
+    print("13. SMOTE Applied")
 
     return x_train_balanced, y_train_balanced
